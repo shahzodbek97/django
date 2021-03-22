@@ -1,0 +1,49 @@
+<head>
+<style>
+  *{
+    margin:0;
+    padding: 0;
+  }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration:none;
+  font-size: 18px;
+}
+
+li a:hover:not(.active){
+  background-color: red;
+}
+
+.active{
+  background-color: #4CAF50;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="{% url 'home' %}">BOSH SAHIFA</a></li>
+  <li><a href="{% url 'about' %}">BIZ HAQIMIZDA</a></li>
+  <li><a href="{% url 'product' %}">MAHSULOTLAR</a></li>
+  <li><a href="{% url 'contact' %}">ALOQA</a></li>
+</ul>
+{% block content %}
+
+{% endblock content %}
